@@ -84,7 +84,7 @@ export default function LoginScreen({ onLogin }) {
               <span className={styles.bullet}>&#x1F7E2;</span> <a target="_blank" href="https://github.com/anaecontreras/nexus-bass-caja-pandora.git">Repositorio GitHub</a>
             </li>
             <li className={styles.listItem}>
-              <span className={styles.bullet}>&#x1F7E2;</span> <a target="_blank" className="linkItem" href="https://www.youtube.com/watch?v=0RrQ49Kiuwc&list=PLTcOzxm2NcYBBAZC-Ya_xqZ_eZ8i0o9NC">Video de validación</a>
+              <span className={styles.bullet}>&#x1F7E2;</span> <a target="_blank" className="linkItem" href="https://drive.google.com/file/d/1GSHplP2jl3ZQSh4pryfonppCWrrK1j-G/view">Video de validación</a>
             </li>
           </ul>
         </div>
