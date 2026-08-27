@@ -13,7 +13,7 @@
 ## 🌐 Demo en Vivo y Recursos
 
 - 🚀 **Despliegue en producción**: [nexus-baas-caja-pandora.netlify.app](https://nexus-baas-caja-pandora.netlify.app/)
-- 📹 **Documentación del flujo y arquitectura**: [Ver Video Explicativo](#) *(https://drive.google.com/file/d/1GSHplP2jl3ZQSh4pryfonppCWrrK1j-G/view)*
+- 📹 **Documentación del flujo y arquitectura**: [Ver Video Explicativo](ttps://drive.google.com/file/d/1GSHplP2jl3ZQSh4pryfonppCWrrK1j-G/view)
 - 💻 **Repositorio**: [github.com/darwinjcn/nexus-bass-caja-pandora](https://github.com/darwinjcn/nexus-bass-caja-pandora)
 
 ---
