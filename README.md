@@ -1,88 +1,101 @@
-# NEXUS-BAAS v2.0 — Orquestador Soberano de Persistencia Local
+# 🚀 NEXUS-BAAS v2.0
+### Client-Side Database Orchestrator & API Mocking Engine
 
-**Actividad Misión 2.0** — Unidad Curricular: **Formación Sociocrítica III**  
-**PNF en Informática** — Universidad Nacional Experimental de las Telecomunicaciones e Informática (UNETI)
+> Una arquitectura de persistencia de datos que opera íntegramente en el navegador, eliminando la dependencia de servidores backend.
+
+![React 19](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite 8](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![LocalStorage](https://img.shields.io/badge/Storage-LocalStorage-FF7A00?style=for-the-badge&logo=html5&logoColor=white)
+
+---
+
+## 🌐 Demo en Vivo y Recursos
+
+- 🚀 **Despliegue en producción**: [nexus-baas-caja-pandora.netlify.app](https://nexus-baas-caja-pandora.netlify.app/)
+- 📹 **Documentación del flujo y arquitectura**: [Ver Video Explicativo](#) *(https://drive.google.com/file/d/1GSHplP2jl3ZQSh4pryfonppCWrrK1j-G/view)*
+- 💻 **Repositorio**: [github.com/darwinjcn/nexus-bass-caja-pandora](https://github.com/darwinjcn/nexus-bass-caja-pandora)
 
 ---
 
 ## 📋 Descripción del Proyecto
 
-NEXUS-BAAS v2.0 (Backend As A Service) es una plataforma web progresiva que funciona como un orquestador de persistencia de datos completamente local, operando dentro del navegador del usuario. Fue diseñada bajo principios de **infraestructura inmune, soberanía tecnológica y resiliencia territorial**, permitiendo la gestión simulada de bases de datos relacionales distribuidas sin depender de servidores externos ni conexiones a Internet.
+**NEXUS-BAAS** (Backend as a Service) es un *Proof of Concept (PoC)* de una plataforma web progresiva que funciona como un orquestador de persistencia de datos del lado del cliente. En lugar de depender de un servidor externo o una base de datos en la nube, el sistema crea, gestiona y simula una **base de datos relacional completa** operando 100% dentro del navegador del usuario mediante `localStorage`.
 
-El sistema implementa un flujo completo de 6 pantallas interactivas que abarcan desde la autenticación local hasta la simulación de contingencias de red, pasando por la construcción visual de esquemas de bases de datos, control ético de arquitectura, simulación de APIs REST y consola de resiliencia.
+El proyecto demuestra cómo se puede construir un flujo de desarrollo backend completo (**autenticación**, **definición de esquemas**, **mapeo relacional** y **consumo de APIs REST**) en un entorno aislado (Edge/Client-side), ideal para prototipados rápidos, desarrollo offline, o aplicaciones que requieran máxima privacidad de datos (*Zero-Knowledge*).
 
 ---
 
-## 🛠️ Lenguajes y Tecnologías Utilizadas
+## 📸 Flujo de la Aplicación (UI/UX)
+
+El sistema está diseñado bajo una arquitectura **SPA (Single Page Application)** con una estética *"Dark Mode"* de alto contraste orientada a terminales de desarrollo.
+
+| Módulo de Autenticación | Panel de Control (Dashboard) |
+| :---: | :---: |
+| ![Autenticación](./assets/login-screen.png) | ![Dashboard](./assets/dashboard-screen.png) |
+
+| Auditoría de Eventos (Logs) | Métricas de Almacenamiento |
+| :---: | :---: |
+| ![Logs](./assets/logs-screen.png) | ![Métricas](./assets/metrics-screen.png) |
+
+| Motor de Simulación API REST | Editor Visual de Entidades (DDL) |
+| :---: | :---: |
+| ![API Mock](./assets/api-mock-screen.png) | ![Editor Esquema](./assets/schema-builder-screen.png) |
+
+> 💡 *Nota: Reemplaza las rutas `./assets/...` con los nombres reales de tus capturas de pantalla en la carpeta `assets/`.*
+
+---
+
+## 🛠️ Stack Tecnológico
 
 | Recurso | Especificación |
-|---|---|
-| **Lenguaje** | JavaScript (ES6+) |
-| **Framework Frontend** | React 19 con componentes funcionales y Hooks (`useState`, `useEffect`, `useRef`) |
-| **Lenguaje de Estilos** | CSS Modules (`*.module.css`) — sin frameworks corporativos ni Tailwind |
-| **Entorno de Ejecución** | Navegador web (Chromium-based, Firefox, Edge) |
-| **Persistencia** | `localStorage` del navegador (API Web Storage) |
-| **Herramienta de Build** | Vite 8 |
-| **Node.js** | v20+ (entorno de desarrollo) |
-| **Control de Versiones** | Git |
-
-### Metodología de Desarrollo
-
-- **Arquitectura**: Basada en componentes funcionales de React con estado global centralizado mediante hooks de estado (`useState`). La navegación entre pantallas se controla mediante una variable de estado `screen` que determina qué componente se renderiza.
-- **Persistencia**: Toda la base de datos relacional se simula y opera de forma reactiva utilizando el `localStorage` del navegador, con una estructura JSON única bajo la clave `nexus_datastore`.
-- **Diseño Visual**: "Dark Mode" con paleta de colores de alto contraste: fondo `#0d1117`, contenedores `#161b22`, texto y bordes activos en cian `#00F2FE`, alertas en verde neón `#39FF14` y advertencias en naranja `#FF9F00`. Tipografía monoespaciada.
-- **Estilos**: Aislamiento completo de estilos mediante CSS Modules, garantizando que no haya conflictos entre componentes y que la interfaz sea ultraligera.
+| :--- | :--- |
+| **Lenguaje** | **JavaScript (ES6+)** |
+| **Frontend** | **React 19** (Arquitectura basada en componentes funcionales y Hooks: `useState`, `useEffect`, `useRef`) |
+| **Estilos** | **CSS Modules** (`*.module.css`) — Arquitectura libre de dependencias (*Zero CSS Frameworks*) |
+| **Persistencia** | **localStorage** (Web Storage API) simulando un motor relacional reactivo bajo la clave `nexus_datastore` |
+| **Build Tool** | **Vite 8** |
+| **Entorno** | Navegadores modernos (Chromium-based, Firefox, Edge) / Node.js v20+ |
 
 ---
 
-## 🧩 ¿Qué se Programó?
+## 🏗️ Arquitectura y Decisiones de Diseño
 
-Se desarrolló una aplicación web de página única (SPA) compuesta por **6 pantallas interactivas**, cada una con su propia lógica de estado, persistencia en localStorage e interfaz de usuario:
-
-### Pantalla 1 — Autenticación Soberana
-Formulario de inicio de sesión con credenciales precargadas (`demo@uneti.edu.ve` / `demo1234`), botón con estado de verificación simulado (1.5 segundos) y bloque manifiesto político-técnico con valores de infraestructura inmune.
-
-### Pantalla 2 — Panel Central de Gestión (Dashboard)
-Sidebar con lista dinámica de nodos/proyectos activos, herramientas de: Registro de Eventos (10 logs simulados de auditoría local), Métricas de Almacenamiento (conteo de tablas, registros totales y espacio estimado), Llaves Simétricas de Encriptación (generación y regeneración de token AES-256). Modal para crear nuevos nodos de persistencia local. Botón de limpieza de bases de datos usuario (preserva la base semilla). Cierre de sesión.
-
-### Pantalla 3 — Constructor Visual de Entidades (Esquemas)
-Editor de metadatos puros donde el usuario define la estructura arquitectónica de tablas y columnas (nombre, tipo VARCHAR/INTEGER/BOOLEAN, clave primaria, nullable, clave foránea con selección de tabla y campo referenciado). Creación de nuevas tablas personalizadas. Persistencia del esquema relacional en localStorage.
-
-### Pantalla 4 — Alcabala de Control Ético y Mapeo
-Diagrama de relaciones y llaves foráneas del proyecto activo. Tres checkboxes de auditoría de soberanía que deben marcarse para liberar la transición. Estado reactivo: naranja bloqueado / verde liberado.
-
-### Pantalla 5 — Servidor de Simulación de APIs (Mock)
-Lista de endpoints CRUD autogenerados por tabla (`GET`, `POST`, `PUT`, `DELETE`). Ejecución simulada con 500ms de latencia que renderiza los datos reales del localStorage en formato JSON. Resolución de claves foráneas: los registros muestran los valores display de las tablas referenciadas (ej: título del libro en lugar del ID numérico). Descarga soberana del diccionario de datos en archivo `.json` físico mediante el API Blob del navegador.
-
-### Pantalla 6 — Consola de Resiliencia Territorial
-Terminal emulada tipo Linux bash que ejecuta una cascada asíncrona de 12 eventos simulando una contingencia de desconexión internacional y el resguardo de datos en almacenamiento local. Botón de retorno seguro al panel central.
+- **Gestión de Estado**: Se utilizó un enrutamiento interno basado en el estado de React (variable `screen`) en lugar de librerías externas como *React Router*, manteniendo el *bundle* extremadamente **ligero y optimizado**.
+- **Motor de Datos**: El archivo `datastore.js` actúa como un **ORM/Controlador básico** que abstrae la lectura/escritura de JSON en el `localStorage`, permitiendo operaciones tipo **CRUD** y resolución de claves foráneas en tiempo de ejecución.
+- **Diseño UI**: Interfaz tipo *"IDE/Terminal"* utilizando una paleta de colores oscura (`#0d1117`), con acentos en **cian neón** (`#00F2FE`) para estados activos y **verde neón** (`#39FF14`) para outputs exitosos.
 
 ---
 
-## 📦 Datos Semilla
+## 🧩 Módulos Principales Desarrollados
 
-La aplicación se inicializa automáticamente con una base de datos relacional de ejemplo para la **"Sistema de Gestión de Biblioteca Personal"**, que incluye:
-
-- **10 libros** de autores latinoamericanos (Rómulo Gallegos, Gabriel García Márquez, Juan Rulfo, Jorge Luis Borges, Julio Cortázar, Mario Vargas Llosa, etc.)
-- **5 usuarios** con datos de contacto y ubicación geográfica
-- **12 préstamos** con fechas entre el 15 de mayo y 22 de junio de 2026, relacionando usuarios y libros mediante claves foráneas
+- 🔐 **Auth Module**: Sistema de inicio de sesión local con validación de credenciales contra el *datastore* y simulación de latencia de red (1.5s).
+- 📊 **Dashboard & Telemetría**: Panel centralizado mostrando nodos activos, logs de auditoría del sistema, **métricas en tiempo real** (conteo de tablas, registros, peso en KB) y gestión de tokens de encriptación simulados.
+- 🗄️ **Schema Builder (DDL Client)**: Interfaz para definir la estructura arquitectónica de la base de datos directamente en el navegador (creación de tablas, asignación de tipos de datos `VARCHAR`/`INTEGER`/`BOOLEAN`, definición de *Primary Keys* y *Foreign Keys*).
+- ⚡ **API Mocking Engine**: Generador automático de *endpoints* REST (`GET`, `POST`, `PUT`, `DELETE`) por cada tabla creada. Incluye simulación de latencia (500ms), **resolución de relaciones** (mostrar el nombre de un autor en lugar de su ID) y exportación del diccionario de datos a un archivo `.json` descargable.
+- 🛡️ **Resilience Console**: Emulador de terminal *Bash* que ejecuta un script asíncrono de 12 pasos, demostrando cómo la aplicación asegura los datos ante una simulación de desconexión de red.
 
 ---
 
-## 🚀 Instrucciones de Ejecución
+## 🚀 Ejecución Local
+
+Sigue estos pasos para levantar el proyecto en tu entorno de desarrollo:
 
 ```bash
-# Instalar dependencias
+# 1. Clonar el repositorio
+git clone https://github.com/darwinjcn/nexus-bass-caja-pandora.git
+
+# 2. Navegar al directorio del proyecto
+cd nexus-bass-caja-pandora
+
+# 3. Instalar dependencias
 npm install
 
-# Ejecutar en modo desarrollo
+# 4. Levantar servidor de desarrollo
 npm run dev
 
-# Compilar para producción
+# 5. Compilar para producción
 npm run build
-
-# Vista previa de la compilación
-npm run preview
 ```
 
 ---
@@ -90,32 +103,52 @@ npm run preview
 ## 📁 Estructura del Proyecto
 
 ```
-nexus_v1/
+nexus-bass-caja-pandora/
 ├── index.html                  # Punto de entrada HTML
 ├── package.json                # Dependencias y scripts
 ├── vite.config.js              # Configuración de Vite
+├── assets/                     # Recursos estáticos (Capturas de pantalla)
 ├── src/
 │   ├── main.jsx                # Punto de entrada React
-│   ├── index.css               # Estilos globales
-│   ├── App.jsx                 # Componente raíz (orquestador de pantallas)
+│   ├── index.css               # Estilos globales y reset
+│   ├── App.jsx                 # Componente raíz (Orquestador de rutas)
 │   ├── App.module.css          # Estilos del componente raíz
 │   ├── utils/
-│   │   └── datastore.js        # Inicialización, consulta y mutación de localStorage
+│   │   └── datastore.js        # Abstracción de la base de datos en localStorage
 │   └── components/
-│       ├── LoginScreen.jsx / .module.css
-│       ├── DashboardScreen.jsx / .module.css
-│       ├── SchemaBuilderScreen.jsx / .module.css
-│       ├── EthicalCheckpointScreen.jsx / .module.css
-│       ├── ApiMockScreen.jsx / .module.css
-│       ├── TerminalScreen.jsx / .module.css
-│       ├── Modal.jsx / .module.css
-│       └── ... (módulos de estilo asociados)
+│       ├── LoginScreen.jsx
+│       ├── DashboardScreen.jsx
+│       ├── SchemaBuilderScreen.jsx
+│       ├── EthicalCheckpointScreen.jsx
+│       ├── ApiMockScreen.jsx
+│       ├── TerminalScreen.jsx
+│       └── ... (Módulos CSS asociados)
 ```
 
 ---
 
-## 👥 Equipo de Desarrollo
+## 📜 **Licencia**
 
-Proyecto desarrollado como parte de la Unidad Curricular **Formación Sociocrítica III** del PNF en Informática, promoviendo el uso de tecnologías libres, soberanía tecnológica y arquitecturas de software resilientes para infraestructuras nacionales.
-Integrantes:
-Diana Sierra, Ana Contreras, Darwin Colmenares y Yolimar Ramos
+Este proyecto es un *Proof of Concept* desarrollado con fines educativos y de investigación. **No está diseñado para uso en producción** sin adaptaciones adicionales.
+
+> ⚠️ **Advertencia**: El uso de `localStorage` como base de datos tiene limitaciones (ej. 5MB por dominio, solo datos en formato string). Para aplicaciones reales, considera bases de datos como **IndexedDB** o soluciones *offline-first* como **PouchDB**.
+
+---
+
+## 🤝 **Contribuciones**
+
+Las contribuciones son bienvenidas. Para colaborar:
+1. Haz un *fork* del repositorio.
+2. Crea una rama para tu funcionalidad (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y haz *commit* (`git commit -m "Añade nueva funcionalidad"`).
+4. Envía un *Pull Request* a la rama `main`.
+
+---
+
+## 📞 **Contacto**
+
+Para preguntas o sugerencias, abre un *issue* en el [repositorio](https://github.com/darwinjcn/nexus-baas-caja-pandora/issues) o contacta al equipo.
+
+---
+
+**Desarrollado con 💚 por el equipo de NEXUS-BAAS**
