@@ -32,17 +32,16 @@ El sistema está diseñado bajo una arquitectura **SPA (Single Page Application)
 
 | Módulo de Autenticación | Panel de Control (Dashboard) |
 | :---: | :---: |
-| ![Autenticación](./assets/login-screen.png) | ![Dashboard](./assets/dashboard-screen.png) |
+| ![Autenticación](./assets/01.autenticacion.png) | ![Dashboard](./assets/02.dashboard.png) |
 
 | Auditoría de Eventos (Logs) | Métricas de Almacenamiento |
 | :---: | :---: |
-| ![Logs](./assets/logs-screen.png) | ![Métricas](./assets/metrics-screen.png) |
+| ![Logs](./assets/03.registro-eventos.png) | ![Métricas](./assets/04.metricas-almacenamiento.png) |
 
 | Motor de Simulación API REST | Editor Visual de Entidades (DDL) |
 | :---: | :---: |
-| ![API Mock](./assets/api-mock-screen.png) | ![Editor Esquema](./assets/schema-builder-screen.png) |
+| ![API Mock](./assets//05.simulador-api.png) | ![Editor Esquema](./assets/06.editor-esquema.png) |
 
-> 💡 *Nota: Reemplaza las rutas `./assets/...` con los nombres reales de tus capturas de pantalla en la carpeta `assets/`.*
 
 ---
 
